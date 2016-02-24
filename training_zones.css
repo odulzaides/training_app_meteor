@@ -1,0 +1,18 @@
+/* CSS declarations go here */
+
+.cover{
+    background: #222 url("http://cdn.shopify.com/s/files/1/0109/5012/files/MensCyclingCollection.jpg?7804393145661714639") center center no-repeat;
+    background-size: cover;
+    color:#000;
+    height: 100%;
+    text-align: center;
+    display:flex;
+    align-items: center;
+}
+.cover-caption{
+    width:100%;
+    padding-bottom:10px;
+}
+.navbar{
+    background: black;
+}

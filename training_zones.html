@@ -1,0 +1,160 @@
+<head>
+    <title>training_zones</title>
+</head>
+
+<body>
+<!--TODO fix color on navbar-->
+<!-- TODO - fix width so it takes up the whole screen
+    check Hussey bootstrap 4
+-->
+<div class="container-fluid">
+    {{> nav}}
+    <h1>Power and Lactate Threshold heart Rate Calculator!</h1>
+
+
+    <!--TODO - set jumbotron image and caption-->
+    {{> cover }}
+<!--TODO - Set up table template
+           set up calculation ain object.-->
+    {{> table}}
+
+</div>
+<!-- container
+-->
+</body>
+
+<template name="nav">
+
+    <nav class="navbar navbar-dark bg-inverse navbar-full">
+
+
+        <!--<a class="navbar-brand" href="#">You Logo</a>-->
+        <ul class="nav navbar-nav">
+            {{ #each nav }}
+            <li class="nav-item active">
+                <a class="nav-link" href= {{ home_link}}>{{ home }}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ features_link }}">{{ features }}</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="{{ about_link }}">{{ about }}</a>
+            </li>
+            {{ /each }}
+        </ul>
+        <!--<form class="form-inline pull-xs-right">-->
+        <!--<input class="form-control" type="text" placeholder="Search">-->
+        <!--<button class="btn btn-success-outline" type="submit">Search</button>-->
+        <!--</form>-->
+
+
+    </nav>
+
+
+</template>
+<template name="cover">
+    <section class="cover">
+        <div class="cover-caption">
+
+            <div class="col-sm-10">
+                <h2>
+                    Are you ready to train with intention ?
+                </h2>
+
+                <h3>
+                    Type in your FTP and LTHR below and to see your training zones.
+                </h3>
+
+                <form action="" class="form-inline">
+                    <div class="form-group">
+                        <label class="sr-only" for="">Name</label>
+                        <input type="text" id="name" class="form-control from-control-lg" placeholder="name"/>
+                        <input type="number" id="ftp" class="form-control from-control-lg" placeholder="Enter your FTP"/>
+
+                        <input type="number" id="lthr" class="form-control from-control-lg" placeholder="Enter your LTHR"/>
+                    </div>
+                    <button role="button" type="button" id="button" class="btn btn-primary btn-md">okay, go!</button>
+                </form>
+            </div>
+
+
+        </div>
+    </section>
+</template><!-- container
+-->
+<template name="table">
+    <table class="table table-inverse">
+        <thead>
+        <tr>
+            <th>Zone</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+            <th>Username</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Endurance</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <th>Username</th>
+        </tr>
+        <tr>
+            <th scope="row">1</th>
+            <td>Tempo</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <th>Username</th>
+        </tr>
+        <tr>
+            <th scope="row">1</th>
+            <td>Sweet Spot</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <th>Username</th>
+        </tr>
+        <tr>
+            <th scope="row">1</th>
+            <td>Threshhold</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <th>Username</th>
+        </tr>
+        <tr>
+            <th scope="row">1</th>
+            <td>VO2</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <th>Username</th>
+        </tr>
+        <tr>
+            <th scope="row">1</th>
+            <td>Anaerobic</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <th>Username</th>
+        </tr>
+        <tr>
+            <th scope="row">1</th>
+            <td>Neuromuscular</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <th>Username</th>
+        </tr>
+
+
+        </tbody>
+    </table>
+
+</template><!-- table
+-->
