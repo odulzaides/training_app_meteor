@@ -93,10 +93,10 @@
 -->
 <template name="input_fields">
 
-    <form id="input-form" name="ftp" action="" class="form-inline">
+    <form id="inputForm"  action="" class="form-inline">
         <div class="form-group">
             <label class="sr-only" for="">Name</label>
-            <input type="text"
+            <input type="number"
                    id="ftp"
                    class="form-control from-control-sm"
                    placeholder="Enter your FTP..."/>
@@ -105,7 +105,7 @@
                    class="form-control from-control-lg"
                    placeholder="Enter your LTHR..."/>
 
-            <button role="button" type="button" id="button" class="btn btn-primary btn-md">Calculate Zones!
+            <button  type="button" id="calc_button" class="btn btn-primary btn-md">Calculate Zones!
             </button>
         </div>
 
@@ -115,7 +115,7 @@
 </template>
 
 <!--
-  TODO - Set up input fields and button for calculator.
+  TODO - Set styles for input fields and table.
 -->
 
 <template name="table">
@@ -123,16 +123,17 @@
         <thead>
         <tr>
             <th>Zone</th>
-            <th>Low End</th>
-            <th>High end</th>
-            <th>Username</th>
-            <th>Username</th>
+            <th>Power Zone Low End</th>
+            <th>Power Zone High End</th>
+            <th>Heart Rate Zone Low End</th>
+            <th>Heart Rate Zone High End</th>
         </tr>
         </thead>
         <tbody>
         <tr>
+
             <th scope="row">1</th>
-            <td>Endurance</td>
+            <td>Endurance (Aerobic Threshhold)</td>
             <td id="end-1">{{ end_1 }}</td>
             <td id="end-2">{{ end_2 }}</td>
             <td id="end-3">{{ end_3 }}</td>
