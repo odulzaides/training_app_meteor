@@ -18,3 +18,8 @@
     margin-bottom: 0;
     background: #0275d8;
 }
+#input-form{
+    padding:20px;
+    float:left;
+    overflow: hidden;
+}

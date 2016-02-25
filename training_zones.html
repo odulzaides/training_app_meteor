@@ -13,7 +13,7 @@
 {{> cover }}
 
 
-
+{{> input_fields }}
 
 
 {{> table}}
@@ -58,13 +58,13 @@
                     <h3>
                         Type in your FTP and LTHR below and to see your training zones.
                     </h3>
-            <!--
-                TODO Fix input fields:
-                1. Name
-                2. email
+                    <!--
+                        TODO Fix input fields:
+                        1. Name
+                        2. email
 
 
-                -->
+                        -->
                     <form action="" class="form-inline">
                         <div class="form-group">
                             <label class="sr-only" for="">Name</label>
@@ -73,7 +73,7 @@
                                    class="form-control from-control-sm"
                                    placeholder="Enter your name..."/>
                             <input type="email"
-                                   id="lthr"
+                                   id="email"
                                    class="form-control from-control-lg"
                                    placeholder="Enter your email address..."/>
                         </div>
@@ -87,12 +87,36 @@
 
         </div>
     </section>
+
+
 </template><!-- container
 -->
+<template name="input_fields">
 
-        <!--
-          TODO - Set up input fields and button for calculator.
-        -->
+    <form id="input-form" name="ftp" action="" class="form-inline">
+        <div class="form-group">
+            <label class="sr-only" for="">Name</label>
+            <input type="text"
+                   id="ftp"
+                   class="form-control from-control-sm"
+                   placeholder="Enter your FTP..."/>
+            <input type="number"
+                   id="lthr"
+                   class="form-control from-control-lg"
+                   placeholder="Enter your LTHR..."/>
+
+            <button role="button" type="button" id="button" class="btn btn-primary btn-md">Calculate Zones!
+            </button>
+        </div>
+
+
+    </form>
+
+</template>
+
+<!--
+  TODO - Set up input fields and button for calculator.
+-->
 
 <template name="table">
     <table class="table table-striped">
@@ -169,18 +193,5 @@
         </tbody>
     </table>
 
-</template><!-- table
+</template><!-- table -->
 
-<!--<form action="" class="form-inline">-->
-    <!--<div class="form-group">-->
-        <!--<label class="sr-only" for="">Name</label>-->
-        <!--<input type="text" id="name" class="form-control from-control-sm" placeholder="name"/>-->
-        <!--<input type="number" id="ftp" class="form-control from-control-sm"-->
-               <!--placeholder="Enter your FTP"/>-->
-
-        <!--<input type="number" id="lthr" class="form-control from-control-lg"-->
-               <!--placeholder="Enter your LTHR"/>-->
-    <!--</div>-->
-    <!--<button role="button" type="button" id="button" class="btn btn-primary btn-md">okay, go!-->
-    <!--</button>-->
-<!--</form>-->
