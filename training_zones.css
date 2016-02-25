@@ -1,10 +1,10 @@
 /* CSS declarations go here */
 
 .cover{
-    background: #222 url("http://cdn.shopify.com/s/files/1/0109/5012/files/MensCyclingCollection.jpg?7804393145661714639") center center no-repeat;
-    background-size: cover;
-    color:#000;
-    height: 100%;
+    background: #222 url("stars.jpg") center center no-repeat;
+    /*background-size: cover;*/
+    color:#fff;
+    height: 860px;
     text-align: center;
     display:flex;
     align-items: center;
@@ -14,5 +14,7 @@
     padding-bottom:10px;
 }
 .navbar{
-    background: black;
+    /*background: blue;*/
+    margin-bottom: 0;
+    background: #0275d8;
 }

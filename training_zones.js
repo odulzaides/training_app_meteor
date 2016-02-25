@@ -1,6 +1,6 @@
 if (Meteor.isClient) {
   // Top Navbar links
-  $(function(){
+
   var nav_items = [
     {
       home: "Home",
@@ -27,9 +27,16 @@ if (Meteor.isClient) {
     var ftp_value = $("#ftp").val();
 
     var lthr_value = $("#lthr").val();
+     var calculations = [
+
+       {end_1:ftp *.56, end_2:ftp *.75, end_3:lthr *.80, end_4:lthr *.84}
+     ];
+    Template.table.helpers({table:calculations});
 
   });
-  });
+
+//  TODO - Set up table template
+
 };
 
 //

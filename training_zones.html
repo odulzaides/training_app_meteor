@@ -1,24 +1,24 @@
 <head>
-    <title>training_zones</title>
+    <title>Power and Lactate Threshold heart Rate Calculator</title>
 </head>
 
 <body>
 <!--TODO fix color on navbar-->
-<!-- TODO - fix width so it takes up the whole screen
-    check Hussey bootstrap 4
--->
-<div class="container-fluid">
-    {{> nav}}
-    <h1>Power and Lactate Threshold heart Rate Calculator!</h1>
 
 
-    <!--TODO - set jumbotron image and caption-->
-    {{> cover }}
-<!--TODO - Set up table template
-           set up calculation ain object.-->
-    {{> table}}
+{{> nav}}
 
-</div>
+
+<!--TODO - set jumbotron image and caption-->
+{{> cover }}
+
+
+
+
+
+{{> table}}
+
+
 <!-- container
 -->
 </body>
@@ -26,8 +26,6 @@
 <template name="nav">
 
     <nav class="navbar navbar-dark bg-inverse navbar-full">
-
-
         <!--<a class="navbar-brand" href="#">You Logo</a>-->
         <ul class="nav navbar-nav">
             {{ #each nav }}
@@ -43,39 +41,47 @@
             </li>
             {{ /each }}
         </ul>
-        <!--<form class="form-inline pull-xs-right">-->
-        <!--<input class="form-control" type="text" placeholder="Search">-->
-        <!--<button class="btn btn-success-outline" type="submit">Search</button>-->
-        <!--</form>-->
-
 
     </nav>
-
-
 </template>
 <template name="cover">
     <section class="cover">
         <div class="cover-caption">
 
-            <div class="col-sm-10">
-                <h2>
-                    Are you ready to train with intention ?
-                </h2>
 
-                <h3>
-                    Type in your FTP and LTHR below and to see your training zones.
-                </h3>
+            <div class="container">
+                <div class="col-sm-10">
+                    <h2>
+                        Are you ready to train with intention ?
+                    </h2>
 
-                <form action="" class="form-inline">
-                    <div class="form-group">
-                        <label class="sr-only" for="">Name</label>
-                        <input type="text" id="name" class="form-control from-control-lg" placeholder="name"/>
-                        <input type="number" id="ftp" class="form-control from-control-lg" placeholder="Enter your FTP"/>
+                    <h3>
+                        Type in your FTP and LTHR below and to see your training zones.
+                    </h3>
+            <!--
+                TODO Fix input fields:
+                1. Name
+                2. email
 
-                        <input type="number" id="lthr" class="form-control from-control-lg" placeholder="Enter your LTHR"/>
-                    </div>
-                    <button role="button" type="button" id="button" class="btn btn-primary btn-md">okay, go!</button>
-                </form>
+
+                -->
+                    <form action="" class="form-inline">
+                        <div class="form-group">
+                            <label class="sr-only" for="">Name</label>
+                            <input type="text"
+                                   id="name"
+                                   class="form-control from-control-sm"
+                                   placeholder="Enter your name..."/>
+                            <input type="email"
+                                   id="lthr"
+                                   class="form-control from-control-lg"
+                                   placeholder="Enter your email address..."/>
+                        </div>
+                        <!--<button role="button" type="button" id="button" class="btn btn-primary btn-md">okay, go!-->
+                        <!--</button>-->
+                        <a class="btn btn-primary " href="#ftp">Let's Get Started</a>
+                    </form>
+                </div>
             </div>
 
 
@@ -83,13 +89,18 @@
     </section>
 </template><!-- container
 -->
+
+        <!--
+          TODO - Set up input fields and button for calculator.
+        -->
+
 <template name="table">
-    <table class="table table-inverse">
+    <table class="table table-striped">
         <thead>
         <tr>
             <th>Zone</th>
-            <th>First Name</th>
-            <th>Last Name</th>
+            <th>Low End</th>
+            <th>High end</th>
             <th>Username</th>
             <th>Username</th>
         </tr>
@@ -98,63 +109,78 @@
         <tr>
             <th scope="row">1</th>
             <td>Endurance</td>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <th>Username</th>
+            <td id="end-1">{{ end_1 }}</td>
+            <td id="end-2">{{ end_2 }}</td>
+            <td id="end-3">{{ end_3 }}</td>
+            <td id="end-4">{{ end_4 }}</td>
+
         </tr>
         <tr>
-            <th scope="row">1</th>
+            <th scope="row">2</th>
             <td>Tempo</td>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <th>Username</th>
+            <td id="tempo-1">{{ tempo_1 }}</td>
+            <td id="tempo-2">{{ tempo_2 }}</td>
+            <td id="tempo-3">{{ tempo_3 }}</td>
+            <td id="tempo-4">{{ tempo_4 }}</td>
         </tr>
         <tr>
-            <th scope="row">1</th>
+            <th scope="row">3</th>
             <td>Sweet Spot</td>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <th>Username</th>
+            <td id="SS-1">{{ ss_1 }}</td>
+            <td id="SS-2">{{ ss_2 }}</td>
+            <td id="SS-3">{{ ss_3 }}</td>
+            <td id="SS-4">{{ ss_4 }}</td>
         </tr>
         <tr>
-            <th scope="row">1</th>
-            <td>Threshhold</td>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <th>Username</th>
+            <th scope="row">4</th>
+            <td>Theshhold</td>
+            <td id="threshhold-1">{{ threshold_1 }}</td>
+            <td id="threshhold-2">{{ threshold_2 }}</td>
+            <td id="threshhold-3">{{ threshold_3 }}</td>
+            <td id="threshhold-4">{{ threshold_4 }}</td>
         </tr>
         <tr>
-            <th scope="row">1</th>
+            <th scope="row">5</th>
             <td>VO2</td>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <th>Username</th>
+            <td id="vo2-1">{{ vo2_1 }}</td>
+            <td id="vo2-2">{{ vo2_2 }}</td>
+            <td id="vo2-3">{{ vo2_3 }}</td>
+            <td id="vo2-4">{{ vo2_4 }}</td>
         </tr>
         <tr>
-            <th scope="row">1</th>
+            <th scope="row">6</th>
             <td>Anaerobic</td>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <th>Username</th>
-        </tr>
-        <tr>
-            <th scope="row">1</th>
-            <td>Neuromuscular</td>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <th>Username</th>
+            <td id="anerobic-1">{{ anaerobic_1 }}</td>
+            <td id="anerobic-2">{{ anaerobic_2 }}</td>
+            <td id="anerobic-3">{{ anaerobic_3 }}</td>
+            <td id="anerobic-4">{{ anaerobic_4 }}</td>
         </tr>
 
+
+        <tr>
+            <th scope="row">7</th>
+            <td>Neuromuscular</td>
+            <td id="np-1">Over</td>
+            <td id="np-2">{{ np_1 }}</td>
+            <td id="np-3">Over</td>
+            <th id="np-4">{{ np_1 }}</th>
+        </tr>
 
         </tbody>
     </table>
 
 </template><!-- table
--->
+
+<!--<form action="" class="form-inline">-->
+    <!--<div class="form-group">-->
+        <!--<label class="sr-only" for="">Name</label>-->
+        <!--<input type="text" id="name" class="form-control from-control-sm" placeholder="name"/>-->
+        <!--<input type="number" id="ftp" class="form-control from-control-sm"-->
+               <!--placeholder="Enter your FTP"/>-->
+
+        <!--<input type="number" id="lthr" class="form-control from-control-lg"-->
+               <!--placeholder="Enter your LTHR"/>-->
+    <!--</div>-->
+    <!--<button role="button" type="button" id="button" class="btn btn-primary btn-md">okay, go!-->
+    <!--</button>-->
+<!--</form>-->
